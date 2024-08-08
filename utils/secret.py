@@ -11,3 +11,5 @@ def get_keys():
     primitive_root = 5
     prime_number = 23
     public_key = (primitive_root ** private_key) % prime_number
+    keys = { "private_key": private_key, "primitive_root": primitive_root, "prime_number": prime_number, "public_key": public_key }
+    return keys
