@@ -128,18 +128,14 @@ def main():
         choice = input("Do you want to initiate (i) or receive (r) a process? (i/r): ").strip().lower()
         if choice == 'i':
             peer_ip = input("Enter the IP address of the peer: ").strip()
-            peer_port = int(input("Enter the port of the peer: ").strip())
+            peer_port = int(input("Enter the port of the peer: (Common port is 8080)").strip())
             # peer_ip_hard = '192.168.1.104' #"192.168.1.179" #192.168.1.104
             # peer_ip = peer_ip_hard.strip()
-            peer_port_hard = 8080
-            peer_port = peer_port_hard
             secret_key = getpass.getpass("Enter the secret key: ").strip().encode()
             ini = initiate_process(peer_ip, peer_port, secret_key)
             break
         elif choice == 'r':
-            # local_port = int(input("Enter the port to listen on: ").strip())
-            local_port_hard = 8080
-            local_port = local_port_hard
+            local_port = int(input("Enter the port to listen on: (Common port is 8080) ").strip())
             secret_key_r = getpass.getpass("Enter the secret key: ").strip().encode()
             rec = receive_process(secret_key_r, local_port)
             break

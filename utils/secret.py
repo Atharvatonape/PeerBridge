@@ -64,13 +64,14 @@ def convert_zip_send(connection):
             print(f'Added and encrypted {base_name} to the zip file.')
 
             # Copy the encrypted zip file to the script's directory
-            destination_path = os.path.join(script_directory, output_zip)
-            shutil.copy2(output_zip, destination_path)
-            print(f"Encrypted zip file copied to {destination_path}.")
-            done = send_file(connection, destination_path)
+            # destination_path = os.path.join(directory_to_zip, output_zip)
+            # shutil.copy2(output_zip, destination_path)
+            # print(f"Encrypted zip file copied to {destination_path}.")
+            done = send_file(connection, directory_to_zip)
 
             # Cleanup: remove the encrypted zip file
             os.remove(output_zip)
+            os.remove(encrypted_zip)
             return done
 
 def send_file(connection, file_path):
