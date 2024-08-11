@@ -1,5 +1,5 @@
 
-# Peer-to-Peer Process Manager
+# PeerBridge - Peer-to-Peer Process Manager
 
 ## Project Details
 
