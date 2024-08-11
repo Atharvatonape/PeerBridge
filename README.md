@@ -3,7 +3,7 @@
 
 ## Project Details
 
-The Peer-to-Peer (P2P) Process Manager is a Python-based project designed to facilitate secure file transfer between two peers over a network. The system allows one peer to initiate a file transfer and another to receive it, ensuring security through HMAC-based authentication and encrypted zip file transfers.
+The Peer-to-Peer (P2P) Process Manager is a Python-based Command Line project designed to facilitate secure file transfer between two peers over a network. The system allows one peer to initiate a file transfer and another to receive it, ensuring security through HMAC-based authentication and encrypted zip file transfers.
 
 ### Key Features:
 - **Secret**: You would need a secret word with your friend, otherwise it won't work. Secrecy is the utmost virtue we value 
