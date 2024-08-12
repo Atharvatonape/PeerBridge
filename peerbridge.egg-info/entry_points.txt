@@ -1,0 +1,2 @@
+[console_scripts]
+peerbridge = peerbridge.main:main
