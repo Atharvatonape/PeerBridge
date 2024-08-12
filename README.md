@@ -1,9 +1,18 @@
 
 # PeerBridge - Peer-to-Peer Process Manager
 
+To use 
+```bash
+pip install peerbridge
+```
+
 ## Project Details
 
 The Peer-to-Peer (P2P) Process Manager is a Python-based **Command Line Project** designed to facilitate secure file transfer between two peers over a network. The system allows one peer to initiate a file transfer and another to receive it, ensuring security through HMAC-based authentication and encrypted zip file transfers.
+
+## Motivation
+
+The motivation behind the Peer-to-Peer Process Manager was to create a simple yet secure method of transferring files between two devices. Whether for sharing data between colleagues, syncing files across devices, or securely transmitting sensitive information, this tool provides a straightforward solution.
 
 ### Key Features:
 - **Secret**: You would need a secret word with your friend, otherwise it won't work. Secrecy is the utmost virtue we value 
@@ -12,9 +21,6 @@ The Peer-to-Peer (P2P) Process Manager is a Python-based **Command Line Project*
 - **Flexible Transfer**: Supports both directory and single-file transfers, with the option to send multiple files in sequence.
 - **Automatic Port Reuse**: Implements socket options to allow the server to reuse ports immediately, reducing the likelihood of encountering port conflicts.
 
-## Motivation
-
-The motivation behind the Peer-to-Peer Process Manager was to create a simple yet secure method of transferring files between two devices. Whether for sharing data between colleagues, syncing files across devices, or securely transmitting sensitive information, this tool provides a straightforward solution.
 
 ### Why P2P?
 
@@ -29,44 +35,34 @@ To run the Peer-to-Peer Process Manager on your machine, follow these steps:
 1. **Python 3.x**: Ensure you have Python 3.x installed on your machine. You can download it from [python.org](https://www.python.org/).
 2. **pip**: Make sure you have `pip` installed to manage Python packages.
 
-### Step 1: Clone the Repository
+### Step 1: Installing
 
 Clone the project repository from GitHub (replace `your-repository-url` with the actual URL of your repository):
 
 ```bash
-git clone your-repository-url
-cd your-repository-directory
+pip install peerbridge
 ```
 
-### Step 2: Install Required Python Packages
+### Step 2: Run the Program
 
-The required Python packages are listed in the `requirements.txt` file. Install them using the following command:
+To start the program, navigate to the project directory and run in terminal:
 
 ```bash
-pip install -r requirements.txt
+peerbridge
 ```
+or
 
-### Step 3: Run the Program
-
-To start the program, navigate to the project directory and run the main script:
+Navigate to the project directory and in call it:
 
 ```bash
-python Dhsync.py
+peerbridge.main()
 ```
 
 ### Configuration:
 
-- **Hardcoded Paths**: The script currently uses hardcoded paths for the directories and files to be transferred. Make sure to update these paths in the script if necessary to match your environment.
-- **Port Configuration**: By default, the program uses port `8080` for connections. If this port is in use or you want to use a different port, you can modify the port settings in the `main()` function.
+- **IP address**: You should know the ip of the person you want it connect.
+- **Port Configuration**: You have to select the port, 8080 is a common choice.
 
-### Step 4: Usage
-
-Upon running the script, you will be prompted to choose whether to initiate a file transfer or to receive one:
-
-- **Initiate a Process**: Choose this option to compress and encrypt a directory or file and send it to the receiving peer.
-- **Receive a Process**: Choose this option to receive a file from a peer, authenticate the sender, and decrypt the file on your local machine.
-
-Follow the on-screen instructions to complete the file transfer process.
 
 ## Troubleshooting
 
